@@ -1,0 +1,21 @@
+{
+  "name": "tup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "echarts": "^3.8.5",
+    "webpack": "^3.10.0"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.8",
+    "jquery": "^3.2.1",
+    "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.6"
+  }
+}

@@ -1,0 +1,232 @@
+.tup-pop {
+    /* 居中 */
+    margin: auto;
+    /* 绝对定位 */
+    position: absolute;
+    /*border: solid 0.5px gray;*/
+    height: 500px;
+    width: 500px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* box-shadow: 5px 5px 5px 5px #DCDCDC; */
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    /* 取消默认不显示 */
+    /* display: none; */
+    background-color: white;
+    /* 圆角 */
+    border-radius: 2px;
+}
+
+.tup-pop-title {
+    /* background-color: gray; */
+    background-color: rgb(250, 250, 250);
+    padding: 16px;
+    /* 圆角 */
+    border-radius: 2px 2px 0 0;
+    /* 透明设置 */
+    /* filter: alpha(Opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4; */
+}
+
+.tup-pop-title:hover {
+    cursor: move;
+}
+
+.tup-pop-body {
+    /* 使之出现内部滚动条 */
+    /*overflow: auto;*/
+    margin: auto;
+    /* height: 95%; */
+    padding: 16px;
+    background-color: white;
+}
+
+.tup-btn {
+    background-color: white;
+    /* 文字颜色 */
+    color: rgb(50, 50, 50);
+    /*border: solid 1px gray;*/
+    margin: 16px 16px;
+    padding: 10px 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    /* 去掉蓝色边框 */
+    outline: none;
+    z-index: 2;
+    /* 不可选中 */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* 宽度自适应内容 */
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.tup-btn:hover {
+    /* 正常样式 */
+    /*background-color: azure;*/
+    /* 反色样式 */
+    background-color: rgb(250, 250, 250);
+    /* 手样式 */
+    cursor: pointer;
+}
+
+
+/* 点 */
+
+.tup-point {
+    color: gray;
+    font-size: 20px;
+    /* 不可选中 */
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: -1;
+}
+
+.tup-messager {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 150px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+    /* 不可选 */
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
+}
+
+.tup-messager-title {
+    background-color: rgb(250, 250, 250);
+    height: 30px;
+    line-height: 30px;
+    padding-left: 16px;
+}
+
+.tup-messager-body {
+    background-color: white;
+    padding: 16px 16px;
+}
+
+.tup-btn-circle {
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    /*border: 1px solid gray;*/
+    line-height: 80px;
+    text-align: center;
+    box-shadow: 1px 1px 1px 1px gray;
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2;
+    background-color: white;
+}
+
+.tup-btn-circle:hover {
+    background-color: gray;
+    color: white;
+}
+
+.tup-circle-item {
+    color: gray;
+}
+
+.tup-list {
+    float: left;
+    box-shadow: 1px 1px 1px 1px #DCDCDC;
+    width: 28%;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.tup-list ul {
+    margin-left: 0px;
+}
+
+.tup-list li {
+    margin-left: 0px;
+    margin-top: 5px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.tup-list-title {
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    border-left: 10px gray solid;
+    /*box-shadow: 1px 1px 1px 1px #DCDCDC;*/
+}
+
+
+/* 面板 无色 */
+.tup-panel {
+    float: left;
+    width: 28%;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+/* 输入框 */
+.tup-input {
+    width: 80%;
+    height: 25px;
+    border: 2px solid #ccd0d7;
+    border-radius: 4px;
+}
+
+.tup-msg-bar {
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    left: 0px;
+    top: -20px;
+    padding: 16px 16px;
+    font-size: 20px;
+    line-height: 20px;
+    display: none;
+    z-index: 3;
+    box-shadow: 1px 1px 1px 1px #DCDCDC;
+}
+
+.tup-table {
+    font-family: verdana, arial, sans-serif;
+    font-size: 11px;
+    color: #333333;
+    box-shadow: 1px 1px 1px 1px #DCDCDC;
+    border-collapse: collapse;
+}
+
+.tup-table th {
+    border-width: 1px;
+    padding: 8px;
+    box-shadow: 1px 1px 1px 1px #DCDCDC;
+    background-color: rgb(250, 250, 250);
+}
+
+.tup-table td {
+    border-width: 1px;
+    padding: 8px;
+    box-shadow: 1px 1px 1px 1px #DCDCDC;
+    background-color: #ffffff;
+}
+
+/* 外边距 */
+.tup-margin-16 {
+    margin: 16px;
+}
