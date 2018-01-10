@@ -1,3 +1,5 @@
+// require('./assert/reset.css');
+// require('./assert/tup.css');
 var $ = require('jquery');// 引入jQuery
 var Component = require('./Component');
 
@@ -6,9 +8,9 @@ if (typeof $ == 'undefined') {
     console.warn('jQuery is undefined!');
 }
 
-if (typeof Vue == 'undefined') {
-    console.warn('Vue is undefined!');
-}
+// if (typeof Vue == 'undefined') {
+//     console.warn('Vue is undefined!');
+// }
 
 // 解决响应式高度变化不自动修复
 // ...
@@ -16,7 +18,7 @@ if (typeof Vue == 'undefined') {
 /**
  * 入口
  * 
- * @param {*配置} o 
+ * @param {Object} 配置
  */
 var Tup = function (o) {
 
@@ -169,14 +171,14 @@ var Tup = function (o) {
         // 是否创建新的元素
         if (this.isNew) {
 
+            // 判断组件的类型
+            this.typeAutoAdapter();
+
             // 创建元素
             this.$element = this.createElement();
 
             // 方便使用者基于对象操作元素
             this.options.element = this.$element;
-
-            // 判断组件的类型
-            this.typeAutoAdapter();
 
             // 重新加载样式
             this.setStyler(this.options);

@@ -92,4 +92,10 @@ Component.messager = function (options) {
 
 }
 
+
+Component.table = function(options) {
+    
+}
+
+
 module.exports = Component;

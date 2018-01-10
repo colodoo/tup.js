@@ -2,11 +2,13 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
     entry: {
-        main: __dirname + '\\src\\main.js',
+        tup: __dirname + '\\src\\tup.js',
     },
     output: {
         path: __dirname + '\\dist',
-        filename: '[name].min.js'
+        filename: '[name].js',
+        library: 'Tup',
+        libraryTarget: 'umd',
     },
     module: {
         rules: [

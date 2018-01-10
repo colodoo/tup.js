@@ -144,11 +144,11 @@
 }
 
 .tup-list {
-    float: left;
-    box-shadow: 1px 1px 1px 1px #DCDCDC;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
     width: 28%;
-    margin-right: 20px;
-    margin-top: 20px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
 }
 
 .tup-list ul {
@@ -156,8 +156,9 @@
 }
 
 .tup-list li {
-    margin-left: 0px;
-    margin-top: 5px;
+    margin-left: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
     list-style: none;
     cursor: pointer;
 }
@@ -206,7 +207,7 @@
     box-shadow: 1px 1px 1px 1px #DCDCDC;
 }
 
-.tup-table {
+table.tup-table {
     font-family: verdana, arial, sans-serif;
     font-size: 11px;
     color: #333333;
@@ -214,14 +215,14 @@
     border-collapse: collapse;
 }
 
-.tup-table th {
+.tup-table th{
     border-width: 1px;
     padding: 8px;
     box-shadow: 1px 1px 1px 1px #DCDCDC;
     background-color: rgb(250, 250, 250);
 }
 
-.tup-table td {
+.tup-table td{
     border-width: 1px;
     padding: 8px;
     box-shadow: 1px 1px 1px 1px #DCDCDC;
@@ -234,3 +235,75 @@
 .tup-margin-16 {
     margin: 16px;
 }
+
+
+/* 好看的list样式 */
+
+ol {
+    counter-reset: li;
+    /* Initiate a counter */
+    list-style: none;
+    /* Remove default numbering */
+    *list-style: decimal;
+    /* Keep using default numbering for IE6/7 */
+    font: 15px 'trebuchet MS', 'lucida sans';
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+ol ol {
+    margin: 0 0 0 2em;
+    /* Add some left margin for inner lists */
+}
+
+.rectangle-list a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: white;
+    color: #444;
+    text-decoration: none;
+    transition: all .3s ease-out;
+    /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); */
+}
+
+.rectangle-list a:hover {
+    /* background: #eee; */
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+/* .rectangle-list a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: white;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+} */
+
+.rectangle-list a:after {
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+    transition: all .5s ease-out;
+}
+
+.rectangle-list a:hover:after {
+    left: -3em;
+    border-left-color: gray;
+}
+
+
+/* 好看的list样式 */
