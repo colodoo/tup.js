@@ -1,0 +1,1 @@
+IF EXIST src (DEL /F /S /Q src && echo off > src/main.js) ELSE (MD src  && echo off > src/main.js) && IF EXIST html (DEL /F /S /Q html) ELSE (MD html) && IF EXIST dist (DEL /F /S /Q dist) ELSE (MD dist) && IF EXIST webpack.config.js (DEL /F /S /Q webpack.config.js && echo off > webpack.config.js) ELSE (echo off > webpack.config.js)
