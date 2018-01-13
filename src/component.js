@@ -1,5 +1,6 @@
 var $ = require('jquery');// 引入jQuery
 
+// 组件对象
 var Component = {};
 
 Component.pop = function (options) {
@@ -51,7 +52,9 @@ Component.button = function (options) {
     $(options.element).text(text);
 
     // 点击事件
-    $(options.element).click(component.click);
+    $(options.element).click(function () {
+        component.click(options);
+    });
 
     return this;
 
@@ -86,16 +89,67 @@ Component.messager = function (options) {
     $(options.element).click(function () {
         // 逐渐消失
         $(this).fadeOut(800);
-    })
+    });
 
     return this;
 
 }
 
 
-Component.table = function(options) {
-    
+Component.table = function (options) {
+
+    // 先判断是否为Vue方式创建元素,默认为不启用Vue方式
+    var component = options[options.type];// 类型
+    var isVue = component.isVue || false;// 是否为Vue方式
+    var data = component.data || {};// 渲染的数据
+    var el = component.el || '';// el表达式
+    var parent = options.parent;// 父元素el
+
+    if (isVue) {// 如果为Vue方式
+        // 注册Vue 组 件tup-table
+        Vue.component('tup-table', {
+            template: '<table class="tup-table"> <tr> <th v-for="column in columns">{{ column.title }}</th> </tr> <tr v-for="data in datas"> <td v-for="(col, index) in data">{{col}}</td> </tr> </table>',
+            data: function () {
+                return data
+            }
+        });
+
+        var table = new Vue({
+            el: parent,
+            data: data,
+        });
+    }
 }
 
+/**
+ * 头部的消息栏
+ * 
+ */
+Component.msgBar = function (options) {
+
+    // 获取pop配置
+    var component = options[options.type];
+
+    // 配置
+    var text = '';
+
+    // 设置则读取
+    if (typeof component != 'undefined') {
+        text = component.text;
+    }
+
+    // 基本的class样式
+    $(options.element).addClass('tup-msg-bar');
+
+    // 配置内容
+    $(options.element).text(text);
+
+    // 点击事件
+    $(options.element).click(function () {
+        // 逐渐消失
+        $(this).fadeOut(800);
+    });
+
+}
 
 module.exports = Component;

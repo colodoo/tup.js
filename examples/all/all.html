@@ -6,79 +6,65 @@
   <title>tup-all</title>
   <link rel="stylesheet" href="../../css/reset.css">
   <link rel="stylesheet" href="../../css/tup.css">
+  <script src='../../dist/vue.js'></script>
   <script src='../../dist/tup.js'></script>
 </head>
 
-<body id="app">
+<body>
+  <div id="app">
 
-  <div class="tup-msg-bar">测试</div>
+    <!-- <div class="tup-msg-bar">测试</div> -->
 
-  <table class="tup-table tup-margin-16">
-    <tr>
-      <th>Info Header 1</th>
-      <th>Info Header 2</th>
-      <th>Info Header 3</th>
-    </tr>
-    <tr>
-      <td>Text 1A</td>
-      <td>Text 1B</td>
-      <td>Text 1C</td>
-    </tr>
-    <tr>
-      <td>Text 2A</td>
-      <td>Text 2B</td>
-      <td>Text 2C</td>
-    </tr>
-  </table>
+    <table class="tup-table tup-margin-16">
+      <tr>
+        <th>Info Header 1</th>
+        <th>Info Header 2</th>
+        <th>Info Header 3</th>
+      </tr>
+      <tr>
+        <td>Text 1A</td>
+        <td>Text 1B</td>
+        <td>Text 1C</td>
+      </tr>
+      <tr>
+        <td>Text 2A</td>
+        <td>Text 2B</td>
+        <td>Text 2C</td>
+      </tr>
+    </table>
 
-  <div class="tup-panel tup-margin-16" style="height: 120px;"></div>
+    <div class="tup-panel tup-margin-16" style="height: 120px; padding: 16px;">面板</div>
 
-  <!-- <ul class="tup-list tup-margin-16">
-    <li class="tup-list-title">测试</li>
-    <li>测试测试测试测试测试测试测试测试</li>
-    <li>测试测试测试测试测试测试测试测试</li>
-    <li>测试测试测试测试测试测试测试测试</li>
-    <li>测试测试测试测试测试测试测试测试</li>
-    <li>测试测试测试测试测试测试测试测试</li>
-    <li>测试测试测试测试测试测试测试测试</li>
-    <li>测试测试测试测试测试测试测试测试</li>
-  </ul> -->
+    <!-- <ol class="tup-list tup-margin-16" style="width: 28%;">
+    <li>
+      <a href="#">List item 1</a>
+    </li>
+    <li>
+      <a href="#">List item 2</a>
+    </li>
+    <li>
+      <a href="#">List item 3</a>
+    </li>
+    <li>
+      <a href="#">List item 4</a>
+    </li>
+    <li>
+      <a href="#">List item 5</a>
+    </li>
+  </ol> -->
 
-  <ol class="rectangle-list tup-margin-16" style="width: 28%;">
-      <li><a href="">List item</a></li>
-      <li><a href="">List item</a></li>
-      <li><a href="">List item</a></li>
-      <li><a href="">List item</a></li>
-      <li><a href="">List item</a></li>                       
-  </ol>
-
-  <!-- <div id="echarts" style="height: 500px; width: 500px"></div> -->
+  </div>
 
   <script>
-    // // 基于准备好的dom，初始化echarts实例
-    // var myChart = echarts.init(document.getElementById('echarts'));
-    // // 绘制图表
-    // myChart.setOption({
-    //     title: {
-    //         text: 'ECharts 入门示例'
-    //     },
-    //     tooltip: {},
-    //     xAxis: {
-    //         data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-    //     },
-    //     yAxis: {},
-    //     series: [{
-    //         name: '销量',
-    //         type: 'bar',
-    //         data: [5, 20, 36, 10, 10, 20]
-    //     }]
-    // });
 
     // 弹出框
     var pop = new Tup({
       pop: {
         title: '测试',
         text: '测试'
+      },
+      style: {
+        'display': 'none'
       }
     });
 
@@ -94,8 +80,8 @@
     var button1 = new Tup({
       button: {
         text: '测试1',
-        click: function () {// 点击事件
-          console.log(this);
+        click: function (options) {// 点击事件
+          options.element.hide();
         }
       }
     });
@@ -106,6 +92,56 @@
         title: '测试',
         text: '测试'
       }
+    });
+
+    var msgBar = new Tup({
+      msgBar: {
+        text: '测试msgBar'
+      }
+    });
+
+    var resultDatas = [{
+      "mon": 201701,
+      "tradevolGj": 6650.75,
+      "marketShareGj": "100",
+    }, {
+      "mon": 201702,
+      "tradevolGj": 7327.51,
+      "marketShareGj": "100",
+    }, {
+      "mon": 201703,
+      "tradevolGj": 7802.84,
+      "marketShareGj": "100",
+    }, {
+      "mon": 201711,
+      "tradevolGj": 5061.45,
+      "marketShareGj": "10.0304",
+    }, {
+      "mon": 201712,
+      "tradevolGj": 5061.45,
+      "marketShareGj": "10.0304",
+    }];
+
+    var data = {
+      columns: [{
+        field: 'zd1',
+        title: '字段1',
+      }, {
+        field: 'zd2',
+        title: '字段2',
+      }, {
+        field: 'zd3',
+        title: '字段3',
+      }],
+      datas: resultDatas,
+    };
+
+    var table = new Tup({
+      table: {
+        isVue: true,
+        data: data
+      },
+      parent: '#app'
     });
 
   </script>

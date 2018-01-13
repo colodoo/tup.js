@@ -18,184 +18,24 @@
   <script>
     var resultDatas = [{
       "mon": 201701,
-      "secName": null,
-      "tradevolTotal": null,
       "tradevolGj": 6650.75,
-      "tradevolStk": null,
-      "tradevolFund": null,
       "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
     }, {
       "mon": 201702,
-      "secName": null,
-      "tradevolTotal": null,
       "tradevolGj": 7327.51,
-      "tradevolStk": null,
-      "tradevolFund": null,
       "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
     }, {
       "mon": 201703,
-      "secName": null,
-      "tradevolTotal": null,
       "tradevolGj": 7802.84,
-      "tradevolStk": null,
-      "tradevolFund": null,
       "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
-    }, {
-      "mon": 201704,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 4402.04,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
-    }, {
-      "mon": 201705,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 7877.73,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
-    }, {
-      "mon": 201706,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 5623.85,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
-    }, {
-      "mon": 201707,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 4560.64,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
-    }, {
-      "mon": 201708,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 4579.13,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
-    }, {
-      "mon": 201709,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 4431.27,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
-    }, {
-      "mon": 201710,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 7223.5,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
     }, {
       "mon": 201711,
-      "secName": null,
-      "tradevolTotal": null,
-      "tradevolGj": 5493.11,
-      "tradevolStk": null,
-      "tradevolFund": null,
-      "marketShareGj": "100",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
+      "tradevolGj": 5061.45,
+      "marketShareGj": "10.0304",
     }, {
       "mon": 201712,
-      "secName": null,
-      "tradevolTotal": null,
       "tradevolGj": 5061.45,
-      "tradevolStk": null,
-      "tradevolFund": null,
       "marketShareGj": "10.0304",
-      "rownum": null,
-      "tradevolGjTotal": null,
-      "dt": null,
-      "jsxfGj": null,
-      "orgName": null,
-      "orgId": null,
-      "fundTotal": null
     }];
 
     Vue.component('tup-table', {
@@ -216,7 +56,7 @@
         field: 'zd3',
         title: '字段3',
       }],
-      datas: resultDatas
+      datas: resultDatas,
     };
 
     // 创建根实例
@@ -225,7 +65,7 @@
       data: data,
     });
 
-    table.datas = [];
+    // table.datas = [];
   </script>
 </body>
 
