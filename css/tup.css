@@ -205,6 +205,11 @@
     line-height: 20px;
     z-index: 3;
     box-shadow: 1px 1px 1px 1px #DCDCDC;
+    /* 不可选 */
+    /* -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; */
 }
 
 table.tup-table {
