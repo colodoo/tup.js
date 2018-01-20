@@ -1,3 +1,6 @@
+::selection {background:#e6e6d5;color:#696a52;}
+::-moz-selection{background:#e6e6d5;color:#696a52;}
+
 .tup-pop {
     /* 居中 */
     margin: auto;
@@ -242,9 +245,7 @@ table.tup-table {
 }
 
 
-/* 好看的list样式 */
-
-ol {
+.tup-rectangle-list ol {
     counter-reset: li;
     /* Initiate a counter */
     list-style: none;
@@ -257,12 +258,12 @@ ol {
     text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
 }
 
-ol ol {
+.tup-rectangle-list ol ol {
     margin: 0 0 0 2em;
     /* Add some left margin for inner lists */
 }
 
-.rectangle-list a {
+.tup-rectangle-list a {
     position: relative;
     display: block;
     padding: .4em .4em .4em .8em;
@@ -275,27 +276,12 @@ ol ol {
     /* box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); */
 }
 
-.rectangle-list a:hover {
+.tup-rectangle-list a:hover {
     /* background: #eee; */
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
-/* .rectangle-list a:before {
-    content: counter(li);
-    counter-increment: li;
-    position: absolute;
-    left: -2.5em;
-    top: 50%;
-    margin-top: -1em;
-    background: white;
-    height: 2em;
-    width: 2em;
-    line-height: 2em;
-    text-align: center;
-    font-weight: bold;
-} */
-
-.rectangle-list a:after {
+.tup-rectangle-list a:after {
     position: absolute;
     content: '';
     border: .5em solid transparent;
@@ -305,10 +291,66 @@ ol ol {
     transition: all .5s ease-out;
 }
 
-.rectangle-list a:hover:after {
+.tup-rectangle-list a:hover:after {
     left: -3em;
     border-left-color: gray;
 }
 
 
-/* 好看的list样式 */
+.tup-dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 13px 16px;
+    text-decoration: none;
+}
+
+.tup-dropdown:hover .tup-dropbtn {
+    background-color: #004B97;
+}
+
+.tup-dropdown {
+    display: inline-block;
+}
+
+.tup-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    min-width: 160px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.tup-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    float: left;
+}
+
+.tup-dropdown-content a {
+    max-width: 200px;
+}
+
+.tup-dropdown-content a:nth-child(3n+4) {
+    clear: both;
+}
+
+.tup-dropdown-content a:hover {
+    color: rgb(41, 132, 236);
+}
+
+.tup-dropdown:hover .tup-dropdown-content {
+    display: block;
+}
+
+.tup-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3399CC;
+    padding-left: 50px;
+    height: 40px;
+}
