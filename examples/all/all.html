@@ -10,11 +10,14 @@
   <script src='../../dist/tup.js'></script>
 </head>
 
+<style>
+  .red {
+    color: red;
+  }
+</style>
+
 <body>
   <div id="app">
-
-    <!-- <div class="tup-msg-bar">测试</div> -->
-
 
     <ul class="tup-nav">
       <div class="tup-dropdown">
@@ -28,7 +31,7 @@
           <a href="#">客户概况(员)</a>
         </div>
       </div>
-
+    
       <div class="tup-dropdown">
         <a href="#" class="tup-dropbtn">
           <i class="fa fa-group"></i>&nbsp;下拉菜单&nbsp;
@@ -44,7 +47,7 @@
           <a href="#">客户概况(员)</a>
         </div>
       </div>
-
+    
       <div class="tup-dropdown">
         <a href="#" class="tup-dropbtn">
           <i class="fa fa-group"></i>&nbsp;下拉菜单&nbsp;
@@ -60,7 +63,7 @@
           <a href="#">客户概况(员)</a>
         </div>
       </div>
-
+    
       <div class="tup-dropdown">
         <a href="#" class="tup-dropbtn">
           <i class="fa fa-group"></i>&nbsp;下拉菜单&nbsp;
@@ -123,11 +126,12 @@
     // 弹出框
     var pop = new Tup({
       pop: {
-        title: '测试',
+        title: '测试222222',
         text: '测试'
       },
       style: {
-        'display': 'none'
+        class: 'red',
+        display: 'none'
       }
     });
 
@@ -137,7 +141,6 @@
         text: '测试'
       }
     });
-
 
     // 按钮包含点击事件
     var button1 = new Tup({
@@ -162,6 +165,26 @@
         text: '测试msgBar'
       }
     });
+
+    var msgBar1 = new Tup({
+      msgBar: {
+        text: '测试msgBar1'
+      }
+    });
+
+    var msgBar2 = new Tup({
+      msgBar: {
+        text: '测试msgBar2'
+      }
+    });
+
+
+    new Tup({
+      msgBar: {
+        text: '测试msgBar'
+      }
+    });
+
 
     var resultDatas = [{
       "mon": 201701,

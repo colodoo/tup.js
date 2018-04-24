@@ -121,6 +121,8 @@ Component.table = function (options) {
     }
 }
 
+var msgBarFlag = 0;
+
 /**
  * 头部的消息栏
  * 
@@ -141,13 +143,31 @@ Component.msgBar = function (options) {
     // 基本的class样式
     $(options.element).addClass('tup-msg-bar');
 
+    var top = '0px';
+    // 设置位置
+    if (msgBarFlag == 0) {
+        top = msgBarFlag * 44 + 'px';
+    } else {
+        top = msgBarFlag * 44 + msgBarFlag * 10 + 'px';
+    }
+    $(options.element).css('top', top);
+    msgBarFlag++;
+
     // 配置内容
     $(options.element).text(text);
 
     // 点击事件
     $(options.element).click(function () {
         // 逐渐消失
-        $(this).fadeOut(800);
+        $(this).fadeOut(800, function () {
+            $(this).nextAll('tup-msgbar').each(function () {
+                var top = parseInt($(this).css('top').replace(/[^0-9]/ig, ""));
+                // $(this).animate({ 'top': (top - 54) + 'px' }, 'fast');
+                $(this).css('top', (top - 54) + 'px');
+            });
+            $(this).remove();// 消失后移除
+            msgBarFlag--;
+        });
     });
 
 }

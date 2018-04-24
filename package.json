@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack && start http://127.0.0.1:8000 && http-server -a 0.0.0.0 -p 8000"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "jquery": "^3.2.1",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.1.6",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "yargs": "^11.0.0"
   }
 }

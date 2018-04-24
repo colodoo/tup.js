@@ -12,17 +12,16 @@
 new Tup({
 	type: 'button',
 	button: {
-		title: '测试',
-		text: '测试'
+		title: '表格组件标题',
+		text: '表格组件内容'
 	}
 });
 
 // 不带type属性
 new Tup({
 	button: {
-		title: '测试'.
-		text: '测试'
+		title: '按钮标题'.
+		text: '按钮内容'
 	}
 });
-	
 ```

@@ -35,7 +35,14 @@ var Tup = function (o) {
     this.configer = {};
     this.spliter = {};
     this.selelcer = {};
-    // this.styler = new styler();
+    
+    /**
+     * 样式传递格式
+     * style: {
+     *   display: 'none'
+     *   class: 'className'
+     * }
+     */
     this.styler = {};
 
     // 是否创建新的元素
@@ -96,10 +103,9 @@ var Tup = function (o) {
 
     /**
      * 选择器控制
-     * 1,class方式,对多个元素进行渲染
-     * 2,id方法,对单个元素进行渲染
-     * 3,vue模板方式,对指定的模板进行渲染
-     * 3.1,用Vue的方式更好的渲染数据
+     * 1,JQuery选择器
+     * 2,vue模板方式,对指定的模板进行渲染
+     *  2.1,用Vue的方式更好的渲染数据
      * 
      */
     this.loadSelelcter = function () {
@@ -211,7 +217,7 @@ var Tup = function (o) {
         // 运行回调
         ok(this.options);
 
-        return this;
+        return this.options;
 
     }
 
@@ -222,20 +228,12 @@ var Tup = function (o) {
     this.typeAutoAdapter = function (options) {
 
         if (options.type == '') {
-            // 遍历已注册的组件名
-            var tupSelf = this;
-            $.each(Component, function (componentKey, componentTypeValue) {
-                // 遍历配置内容
-                $.each(tupSelf.options, function (optionKey, optionValue) {
-                    // 包含则自动适配
-                    if (componentKey == optionKey) {
-                        // 设置类型,自动执行相应的组件方法
-                        tupSelf.options.type = optionKey;
-                    }
-
-                })
-            });
-
+            for(var key in this.options) {
+                if(typeof Component[key] != 'undefined') {
+                    this.options.type = key;
+                    return;
+                }
+            }
         }
     }
 
@@ -261,7 +259,7 @@ var Tup = function (o) {
     // 防止引用的方法未定义出现异常,构造写在最后
     this.create(o);
 
-    return this;
+    return this.options;
 
 };
 
