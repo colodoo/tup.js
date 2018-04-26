@@ -4,8 +4,8 @@
 学习前端写的小demo
 
 ## 部署方法
-1、`npm install`
-2、`npm start`
+* 输入命令 `npm install`
+* 输入命令 `npm start`
 
 ## 创建组件方法
 
