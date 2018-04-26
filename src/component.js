@@ -37,6 +37,9 @@ Component.button = function (options) {
     // 获取button配置
     var component = options[options.type];
 
+    // 点击事件初始化
+    component.click = component.click || function () { };
+
     // 配置
     var text = '';
 
@@ -162,8 +165,8 @@ Component.msgBar = function (options) {
         $(this).fadeOut(800, function () {
             $(this).nextAll('tup-msgbar').each(function () {
                 var top = parseInt($(this).css('top').replace(/[^0-9]/ig, ""));
-                // $(this).animate({ 'top': (top - 54) + 'px' }, 'fast');
-                $(this).css('top', (top - 54) + 'px');
+                $(this).animate({ 'top': (top - 54) + 'px' }, 'fast');
+                // $(this).css('top', (top - 54) + 'px');
             });
             $(this).remove();// 消失后移除
             msgBarFlag--;
