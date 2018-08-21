@@ -4,10 +4,11 @@
 <head>
   <meta charset="utf-8">
   <title>tup-all</title>
-  <link rel="stylesheet" href="../../css/reset.css">
-  <link rel="stylesheet" href="../../css/tup.css">
-  <script src='../../dist/vue.js'></script>
-  <script src='../../dist/tup.js'></script>
+  <link rel="stylesheet" href="../../css/reset.css?t=20180427">
+  <link rel="stylesheet" href="../../css/tup.css?t=20180427">
+  <script src='../../dist/vue.js?t=20180427'></script>
+  <script src='../../dist/tup.js?t=20180427'></script>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js?t=20180427"></script>
 </head>
 
 <style>
@@ -99,25 +100,16 @@
       </tr>
     </table>
 
-    <div class="tup-panel tup-margin-16" style="height: 120px; padding: 16px;">面板</div>
-
-    <ol class="tup-rectangle-list tup-margin-16" style="width: 28%;">
-      <li>
-        <a href="#">List item 1</a>
-      </li>
-      <li>
-        <a href="#">List item 2</a>
-      </li>
-      <li>
-        <a href="#">List item 3</a>
-      </li>
-      <li>
-        <a href="#">List item 4</a>
-      </li>
-      <li>
-        <a href="#">List item 5</a>
-      </li>
-    </ol>
+    <!-- <div class="tup-app-nav">
+      <ul>
+        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
+      </ul>
+    </div> -->
 
   </div>
 
@@ -128,10 +120,6 @@
       pop: {
         title: '测试222222',
         text: '测试'
-      },
-      style: {
-        class: 'red',
-        display: 'none'
       }
     });
 
@@ -227,9 +215,31 @@
         isVue: true,
         data: data
       },
-      parent: '#app'
+      parent: '#app',
+      style: {
+        class: 'tup-margin-16',
+        display: 'none'
+      },
     });
 
+    var table1 = new Tup({
+      table: {
+        isVue: true,
+        data: data
+      },
+      parent: '#app',
+      style: {
+        class: 'tup-margin-16',
+        display: 'none'
+      },
+    });
+
+    // $('.tup-app-nav a').on('click', function() {
+    //   $('.tup-app-nav a').each(function() {
+    //     $(this).css('color', '#333');
+    //   });
+    //   $(this).css('color', 'blue');
+    // });
   </script>
 </body>
 

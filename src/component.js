@@ -146,12 +146,16 @@ Component.msgBar = function (options) {
     // 基本的class样式
     $(options.element).addClass('tup-msg-bar');
 
+    var margin = 10;
+    var height = 44;
+
+
     var top = '0px';
     // 设置位置
     if (msgBarFlag == 0) {
-        top = msgBarFlag * 44 + 'px';
+        top = msgBarFlag * height + 'px';
     } else {
-        top = msgBarFlag * 44 + msgBarFlag * 10 + 'px';
+        top = msgBarFlag * height + msgBarFlag * margin + 'px';
     }
     $(options.element).css('top', top);
     msgBarFlag++;
@@ -165,14 +169,12 @@ Component.msgBar = function (options) {
         $(this).fadeOut(800, function () {
             $(this).nextAll('tup-msgbar').each(function () {
                 var top = parseInt($(this).css('top').replace(/[^0-9]/ig, ""));
-                $(this).animate({ 'top': (top - 54) + 'px' }, 'fast');
-                // $(this).css('top', (top - 54) + 'px');
+                $(this).animate({ 'top': (top - (margin + height)) + 'px' }, 'fast');
             });
             $(this).remove();// 消失后移除
             msgBarFlag--;
         });
     });
-
 }
 
 module.exports = Component;

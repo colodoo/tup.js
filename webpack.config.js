@@ -10,6 +10,12 @@ module.exports = {
         library: 'Tup',
         libraryTarget: 'umd',
     },
+    devServer: {
+        contentBase: "./examples",  //以examples为根目录提供文件
+        colors: true,
+        historyApiFallback: true,
+        inline: true
+    },
     module: {
         rules: [
             {
