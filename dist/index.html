@@ -6,14 +6,14 @@
   <title>tup-all</title>
   <link rel="stylesheet" href="../../css/reset.css?t=20180427">
   <link rel="stylesheet" href="../../css/tup.css?t=20180427">
-  <script src='../../dist/vue.js?t=20180427'></script>
-  <script src='../../dist/tup.js?t=20180427'></script>
+  <script src='./vue.js?t=20180427'></script>
+  <script src='./tup.js?t=20180427'></script>
   <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js?t=20180427"></script>
 </head>
 
 <style>
   .red {
-    color: red;
+    color: red
   }
 </style>
 
@@ -23,7 +23,7 @@
     <ul class="tup-nav">
       <div class="tup-dropdown">
         <a href="#" class="tup-dropbtn">
-          <i class="fa fa-group"></i>&nbsp;下拉菜单&nbsp;
+          <i class="fa fa-group"></i>&nbsp下拉菜单&nbsp
           <i class="fa fa-caret-down"></i>
         </a>
         <div class="tup-dropdown-content">
@@ -32,26 +32,10 @@
           <a href="#">客户概况(员)</a>
         </div>
       </div>
-    
+
       <div class="tup-dropdown">
         <a href="#" class="tup-dropbtn">
-          <i class="fa fa-group"></i>&nbsp;下拉菜单&nbsp;
-          <i class="fa fa-caret-down"></i>
-        </a>
-        <div class="tup-dropdown-content">
-          <a href="#">客户概况(员)1</a>
-          <a href="#">投顾产品签约情况汇总(总)</a>
-          <a href="#">客户概况(员)</a>
-          <a href="#">客户概况(员)</a>
-          <a href="#">客户概况(员)</a>
-          <a href="#">客户概况(员)</a>
-          <a href="#">客户概况(员)</a>
-        </div>
-      </div>
-    
-      <div class="tup-dropdown">
-        <a href="#" class="tup-dropbtn">
-          <i class="fa fa-group"></i>&nbsp;下拉菜单&nbsp;
+          <i class="fa fa-group"></i>&nbsp下拉菜单&nbsp
           <i class="fa fa-caret-down"></i>
         </a>
         <div class="tup-dropdown-content">
@@ -64,10 +48,26 @@
           <a href="#">客户概况(员)</a>
         </div>
       </div>
-    
+
       <div class="tup-dropdown">
         <a href="#" class="tup-dropbtn">
-          <i class="fa fa-group"></i>&nbsp;下拉菜单&nbsp;
+          <i class="fa fa-group"></i>&nbsp下拉菜单&nbsp
+          <i class="fa fa-caret-down"></i>
+        </a>
+        <div class="tup-dropdown-content">
+          <a href="#">客户概况(员)1</a>
+          <a href="#">投顾产品签约情况汇总(总)</a>
+          <a href="#">客户概况(员)</a>
+          <a href="#">客户概况(员)</a>
+          <a href="#">客户概况(员)</a>
+          <a href="#">客户概况(员)</a>
+          <a href="#">客户概况(员)</a>
+        </div>
+      </div>
+
+      <div class="tup-dropdown">
+        <a href="#" class="tup-dropbtn">
+          <i class="fa fa-group"></i>&nbsp下拉菜单&nbsp
           <i class="fa fa-caret-down"></i>
         </a>
         <div class="tup-dropdown-content">
@@ -102,12 +102,12 @@
 
     <!-- <div class="tup-app-nav">
       <ul>
-        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
-        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
-        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
-        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
-        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
-        <li><a href="#"><i class="iconfont">&#xe6d7;</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7</i></a></li>
+        <li><a href="#"><i class="iconfont">&#xe6d7</i></a></li>
       </ul>
     </div> -->
 
@@ -121,24 +121,24 @@
         title: '测试222222',
         text: '测试'
       }
-    });
+    })
 
     // 按钮
     var button = new Tup({
       button: {
         text: '测试'
       }
-    });
+    })
 
     // 按钮包含点击事件
     var button1 = new Tup({
       button: {
         text: '测试1',
         click: function (options) {// 点击事件
-          options.element.hide();
+          options.element.hide()
         }
       }
-    });
+    })
 
     // 右下角消息框
     var messager = new Tup({
@@ -146,32 +146,32 @@
         title: '测试',
         text: '测试'
       }
-    });
+    })
 
     var msgBar = new Tup({
       msgBar: {
         text: '测试msgBar'
       }
-    });
+    })
 
     var msgBar1 = new Tup({
       msgBar: {
         text: '测试msgBar1'
       }
-    });
+    })
 
     var msgBar2 = new Tup({
       msgBar: {
         text: '测试msgBar2'
       }
-    });
+    })
 
 
     new Tup({
       msgBar: {
         text: '测试msgBar'
       }
-    });
+    })
 
 
     var resultDatas = [{
@@ -194,7 +194,7 @@
       "mon": 201712,
       "tradevolGj": 5061.45,
       "marketShareGj": "10.0304",
-    }];
+    }]
 
     var data = {
       columns: [{
@@ -208,7 +208,7 @@
         title: '字段3',
       }],
       datas: resultDatas,
-    };
+    }
 
     var table = new Tup({
       table: {
@@ -220,7 +220,7 @@
         class: 'tup-margin-16',
         display: 'none'
       },
-    });
+    })
 
     var table1 = new Tup({
       table: {
@@ -232,14 +232,14 @@
         class: 'tup-margin-16',
         display: 'none'
       },
-    });
+    })
 
     // $('.tup-app-nav a').on('click', function() {
     //   $('.tup-app-nav a').each(function() {
-    //     $(this).css('color', '#333');
-    //   });
-    //   $(this).css('color', 'blue');
-    // });
+    //     $(this).css('color', '#333')
+    //   })
+    //   $(this).css('color', 'blue')
+    // })
   </script>
 </body>
 
